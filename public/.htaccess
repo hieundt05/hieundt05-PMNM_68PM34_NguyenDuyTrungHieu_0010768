@@ -1,0 +1,14 @@
+# 1. Chống xem cấu trúc thư mục
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    # 2. Bật bộ máy điều hướng
+    RewriteEngine On
+
+    # Nếu không phải là file hoặc thư mục thật, thì chuyển về index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Điều hướng mọi thứ về index.php với tham số url
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
