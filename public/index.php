@@ -1,7 +1,5 @@
 <?php
-// PHẢI CÓ THẺ MỞ TRÊN ĐẦY ĐỦ
-
+session_start();
 require_once '../app/core/app.php';
 require_once '../app/core/controller.php';
-
 $app = new App();

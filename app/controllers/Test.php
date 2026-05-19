@@ -1,12 +1,16 @@
 <?php
-// app/controllers/Test.php
 
-class Test {
-    public function index() {
-        echo "test";
+require_once '../app/core/Security.php';
+
+class Test extends Controller {
+    
+    public function __construct() {
+
+        Security::check();
     }
 
-    public function hello($name = "Guest") {
-        echo "<h1>Xin chào " . htmlspecialchars($name) . "</h1>";
+    public function index() {
+        echo "<h1>Out đi e!</h1>";
+
     }
 }
