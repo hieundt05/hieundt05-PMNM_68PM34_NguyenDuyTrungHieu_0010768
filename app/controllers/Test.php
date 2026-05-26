@@ -8,7 +8,6 @@ class Test extends Controller {
 
         Security::check();
     }
-
     public function index() {
         echo "<h1>Out đi e!</h1>";
 
