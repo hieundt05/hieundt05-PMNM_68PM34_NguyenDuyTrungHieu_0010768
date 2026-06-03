@@ -2,10 +2,9 @@
 class Database {
     private $host = 'localhost';
     private $user = 'root'; 
-    private $pass = '';    
+    private $pass = '';     
     private $dbname = 'qlsv'; 
     private $conn;
-
     public function __construct() {
         try {
             $this->conn = new PDO("mysql:host=$this->host;dbname=$this->dbname;charset=utf8", $this->user, $this->pass);
@@ -18,5 +17,9 @@ class Database {
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function execute($sql, $params = []) {
+        $stmt = $this->conn->prepare($sql);
+        return $stmt->execute($params);
     }
 }
