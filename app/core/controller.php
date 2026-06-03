@@ -6,6 +6,7 @@ class Controller {
         return new $model();
     }
     public function view($view, $data = []) {
-        require_once '../app/views/' . $view . '.php';
+        $page = $view;
+        require_once '../app/views/layout_master.php'; 
     }
 }
