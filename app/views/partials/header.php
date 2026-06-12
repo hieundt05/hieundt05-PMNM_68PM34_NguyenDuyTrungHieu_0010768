@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>QLSV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f7f6; margin: 0; }
-        .navbar { background-color: #2c3e50; padding: 15px 30px; }
-        .navbar a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; }
-        .navbar a:hover { color: #3498db; }
-        .container { max-width: 800px; margin: 40px auto; background: white; padding: 30px; border-ra
-        h2 { text-align: center; color: #2c3e50; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e0e0e0; }
-        th { background-color: #3498db; color: #ffffff; font-weight: 600; }
-        tr:hover { background-color: #f1f9ff; transition: background-color 0.3s ease; }
-        .text-center { text-align: center; }
+        body { font-family: 'Roboto', sans-serif; background-color: #f4f6f9; margin: 0; color: #333; }
+        
+        /* Thanh Navbar màu xanh đen tinh gọn */
+        .navbar { background-color: #2c3e50; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; color: white; }
+        .navbar-left a { color: white; text-decoration: none; font-size: 16px; font-weight: bold; letter-spacing: 0.5px; }
+        .navbar-right a { color: white; text-decoration: none; font-size: 15px; font-weight: 500; transition: 0.2s; }
+        .navbar-right a:hover { color: #d1d1d1; }
+        
+        .main-content { background: white; margin: 30px auto; max-width: 1000px; padding: 25px; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="/PMNM-68PM34/public/Sinhvien">Danh sách SV</a>
-        <a href="/PMNM-68PM34/public/Sinhvien/create">Thêm SV</a>
-        <a href="/PMNM-68PM34/public/Login/logout" style="float: right;">Đăng xuất</a>
+        <div class="navbar-left">
+            <a href="/PMNM-68PM34/public/Sinhvien">Quản lý sinh viên</a>
+        </div>
+        <div class="navbar-right">
+            <a href="/PMNM-68PM34/public/Login/logout">Đăng xuất</a>
+        </div>
     </div>
-    <div class="container">
+    <div class="main-content">
